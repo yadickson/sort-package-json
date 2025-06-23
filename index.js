@@ -13,7 +13,7 @@ const onArray = (fn) => (x) => (Array.isArray(x) ? fn(x) : x)
 const onStringArray = (fn) => (x) =>
   Array.isArray(x) && x.every((item) => typeof item === 'string') ? fn(x) : x
 const uniq = onStringArray((xs) => [...new Set(xs)])
-const sortArray = onStringArray((array) => array.toSorted())
+const sortArray = onStringArray((array) => array.slice().sort())
 const uniqAndSortArray = pipe([uniq, sortArray])
 const onObject =
   (fn) =>

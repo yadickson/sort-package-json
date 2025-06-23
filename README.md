@@ -1,12 +1,10 @@
 # Sort Package.json
 
-[![Build Status][github_actions_badge]][github_actions_link]
-[![NPM Version][package_version_badge]][package_link]
 
-[package_version_badge]: https://img.shields.io/npm/v/sort-package-json.svg
-[package_link]: https://www.npmjs.com/package/sort-package-json
-[github_actions_badge]: https://img.shields.io/github/actions/workflow/status/keithamus/sort-package-json/pr.yml
-[github_actions_link]: https://github.com/keithamus/sort-package-json/actions?query=workflow%3ACI+branch%3Amain
+[![npm version](https://img.shields.io/npm/v/@yadickson/sort-package-json.svg)](https://www.npmjs.com/package/@yadickson/sort-package-json)
+[![npm downloads](https://img.shields.io/npm/dw/@yadickson/sort-package-json)](https://www.npmjs.com/package/@yadickson/sort-package-json)
+[![Node.js CI](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml/badge.svg)](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml)
+
 
 ## CLI
 
@@ -19,7 +17,7 @@ npx sort-package-json
 ### Install
 
 ```bash
-npm install --global sort-package-json
+npm install --global @yadickson/sort-package-json
 ```
 
 ### Usage
@@ -29,7 +27,7 @@ $ cd my-project
 $ cat package.json
 {
   "dependencies": {
-    "sort-package-json": "1.0.0",
+    "@yadickson/sort-package-json": "3.3.1",
     "sort-object-keys": "1.0.0"
   },
   "version": "1.0.0",
@@ -47,7 +45,7 @@ $ cat package.json
   "name": "my-awesome-project",
   "version": "1.0.0",
   "dependencies": {
-    "sort-object-keys": "1.0.0",
+    "@yadickson/sort-package-json": "3.3.1",
     "sort-package-json": "1.0.0"
   }
 }
@@ -110,7 +108,7 @@ $ ( PKG="./package.json" ; cat "${PKG?}" | sort-package-json --stdin | diff "${P
 ### Install
 
 ```bash
-npm install --save-dev sort-package-json
+npm install --save-dev @yadickson/sort-package-json
 ```
 
 ### Usage
@@ -127,7 +125,7 @@ import sortPackageJson from 'sort-package-json'
 
 const packageJsonString = `{
   "dependencies": {
-    "sort-package-json": "1.0.0",
+    "@yadickson/sort-package-json": "3.3.1",
     "sort-object-keys": "1.0.0"
   },
   "version": "1.0.0",
@@ -141,7 +139,7 @@ console.log(sortPackageJson(packageJsonString))
   "version": "1.0.0",
   "dependencies": {
     "sort-object-keys": "1.0.0",
-    "sort-package-json": "1.0.0"
+    "@yadickson/sort-package-json": "3.3.1"
   }
 }
 */
@@ -154,7 +152,7 @@ console.log(sortPackageJson(packageJsonObject))
   version: '1.0.0',
   dependencies: {
     'sort-object-keys': '1.0.0',
-    'sort-package-json': '1.0.0'
+    '@yadickson/sort-package-json': '3.3.1'
   }
 }
 */
@@ -211,7 +209,6 @@ console.log(Object.keys(sorted))
 - [c8](https://github.com/bcoe/c8)
 - [commitlint](https://commitlint.js.org/)
 - [ESLint](https://eslint.org/)
-- [Husky](https://github.com/typicode/husky)
 - [Istanbul](https://istanbul.js.org/)
 - [Jest](https://jestjs.io/)
 - [lint-staged](https://github.com/okonet/lint-staged)
@@ -222,35 +219,11 @@ console.log(Object.keys(sorted))
 - [pnpm](https://pnpm.io/)
 - [Prettier](https://prettier.io/)
 - [remark](https://remark.js.org/)
-- [semantic-release](https://github.com/semantic-release/semantic-release)
 - [stylelint](https://github.com/stylelint/stylelint)
 - [Tap](https://node-tap.org/)
 - [xojs](https://github.com/xojs/xo)
 
 _Alphabetically ordered._
-
-## Automatically Sort
-
-The package.json file can be sorted automatically before committing.
-
-```bash
-npm install husky lint-staged --save-dev
-npm pkg set scripts.prepare="husky install"
-npm run prepare
-npx husky add .husky/pre-commit "npx lint-staged"
-```
-
-Add the following to your `package.json` file
-
-```json
-{
-  "lint-staged": {
-    "package.json": "sort-package-json"
-  }
-}
-```
-
-See [Husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) for more information.
 
 ## PFAQ: Potential Frequently Asked Questions
 
@@ -363,7 +336,6 @@ The default order is exported as a `sortOrder` object.
 1. `betterScripts`
 1. `contributes`
 1. `activationEvents`
-1. `husky`
 1. `simple-git-hooks`
 1. `pre-commit`
 1. `commitlint`
@@ -425,3 +397,9 @@ The default order is exported as a `sortOrder` object.
 ### What?! Why would you want to do this?!
 
 Well, it's nice to have the keys of a package.json in a well sorted order. Almost everyone would agree having "name" at the top of a package.json is sensible (rather than sorted alphabetically or somewhere silly like the bottom), so why not the rest of the package.json?
+
+## Thanks to keithamus
+
+https://github.com/keithamus/sort-package-json
+
+Keith Cirkel <npm@keithcirkel.co.uk>
