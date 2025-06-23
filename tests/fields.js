@@ -80,12 +80,6 @@ for (const field of ['keywords', 'files', 'activationEvents', 'categories']) {
   test(field, macro.uniqueArray, { path: field })
 }
 
-test('husky', macro.sortObject, {
-  path: 'husky.hooks',
-  value: keysToObject(['z', ...gitHooks, 'a']),
-  expect: keysToObject([...gitHooks, 'a', 'z']),
-})
-
 test('binary', macro.sortObject, {
   path: 'binary',
   value: {

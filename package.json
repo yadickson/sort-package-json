@@ -43,7 +43,6 @@
     "build": "esbuild index.js --bundle --platform=node --outfile=index.cjs",
     "fix": "eslint . --fix && prettier . --write && node cli.js \"package.json\"",
     "lint": "eslint . && prettier . \"!**/*.js\" --check && node cli.js \"package.json\" --check",
-    "prepare": "husky",
     "prepublishOnly": "npm run build",
     "test": "ava && dtslint --localTs node_modules/typescript/lib",
     "test-coverage": "c8 ava",

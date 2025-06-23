@@ -6,6 +6,10 @@
 [![Node.js CI](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml/badge.svg)](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml)
 
 
+## Dependencies
+
+Node 18.0 or later is the only dependency.
+
 ## CLI
 
 ### Run via npx (npm@5.2+ required)
