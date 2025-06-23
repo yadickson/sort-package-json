@@ -1,10 +1,8 @@
 # Sort Package.json
 
-
 [![npm version](https://img.shields.io/npm/v/@yadickson/sort-package-json.svg)](https://www.npmjs.com/package/@yadickson/sort-package-json)
 [![npm downloads](https://img.shields.io/npm/dw/@yadickson/sort-package-json)](https://www.npmjs.com/package/@yadickson/sort-package-json)
 [![Node.js CI](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml/badge.svg)](https://github.com/yadickson/sort-package-json/actions/workflows/npm-build.yml)
-
 
 ## Dependencies
 
