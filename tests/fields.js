@@ -1,7 +1,6 @@
 import test from 'ava'
-import gitHooks from 'git-hooks-list'
 import sortPackageJson from '../index.js'
-import { macro, keysToObject } from './_helpers.js'
+import { macro } from './_helpers.js'
 
 // fields sort keep as it is
 for (const field of [
